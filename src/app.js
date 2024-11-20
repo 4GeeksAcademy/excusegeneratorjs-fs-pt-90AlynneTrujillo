@@ -15,18 +15,10 @@ let when = [
   "while I was meditating"
 ];
 
-function getRandomNum(min, max) {
-  return Math.floor(Math.random() * (max - min) + min);
-}
-
 function getRandom(arr) {
-  let max = arr.length;
-  let min = 0;
-  let random = getRandomNum(min, max);
-  return arr[random];
+  return arr[Math.floor(Math.random() * arr.length)];
 }
 window.onload = function() {
-  console.log("Hello Rigo from the console!");
   document.getElementById("excuse").innerHTML =
     getRandom(who) +
     " " +
